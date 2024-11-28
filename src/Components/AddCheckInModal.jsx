@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./AddCheckInModal.css";
+import "./AddCheckInModal.css"; // Your CSS file for styling
 import InboxOutlinedIcon from "@mui/icons-material/InboxOutlined";
 import { collection, addDoc } from "firebase/firestore"; // Firestore methods
-import db from "../firebaseConfig"; // Your Firestore instance
+import db from "../firebaseConfig"; // Firebase configuration file
 
 export default function AddCheckInModal({ isOpen, onClose, onSubmit }) {
   const [title, setTitle] = useState("");
@@ -23,13 +23,18 @@ export default function AddCheckInModal({ isOpen, onClose, onSubmit }) {
       // Save the data to Firestore
       const docRef = await addDoc(collection(db, "checkIns"), {
         title,
-        imageName: image.name, // Store image file name or path
+        imageName: image.name, // Store image file name
         createdAt: new Date(),
       });
 
       console.log("Document written with ID: ", docRef.id);
 
-      onSubmit({ title, image });
+      // Call the onSubmit handler passed as a prop
+      if (typeof onSubmit === "function") {
+        onSubmit({ title, image });
+      }
+
+      // Reset form fields
       setTitle("");
       setImage(null);
       onClose();

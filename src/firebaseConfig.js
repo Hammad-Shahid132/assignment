@@ -16,18 +16,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app); // Initialize Firestore
 
-async function testFirestore() {
-  try {
-    const docRef = await addDoc(collection(db, "testCollection"), {
-      testField: "testValue",
-      createdAt: new Date(),
-    });
-    console.log("Document written with ID: ", docRef.id);
-  } catch (error) {
-    console.error("Error adding document: ", error);
-  }
-}
-
-testFirestore();
-
 export default db; // Export Firestore instance
