@@ -1,0 +1,165 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Container */
+.modal-container {
+  background: #fff;
+  border-radius: 12px;
+  width: 450px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Modal Header */
+.modal-header {
+  background: #fff;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999;
+}
+
+.close-button:hover {
+  color: #666;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 20px 20px 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Hide the default file input */
+.file-input {
+  display: none;
+}
+
+/* Style the custom file upload area */
+.file-upload {
+  text-align: center;
+  border: 2px dashed #e6e6e6;
+  border-radius: 6px;
+  padding: 30px;
+  background: #fafafa;
+  transition: border-color 0.3s ease;
+}
+
+.file-upload:hover {
+  border-color: #7b5aff;
+}
+
+/* Style for the custom label */
+.file-label {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #7b5aff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.file-label:hover {
+  color: #6248cc;
+}
+
+/* Additional text styles */
+.file-text {
+  font-size: 12px;
+  color: #999;
+  margin-top: 8px;
+}
+
+.mui-logo{
+  color: #6248cc;
+}
+
+.file-selected {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.form-input{
+  color: black;
+  outline: none;
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 15px 20px;
+  background: #f9f9f9;
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancel-button {
+  padding: 8px 15px;
+  font-size: 14px;
+  color: #333;
+  background: #f2f2f2;
+  border: 1px solid #e6e6e6;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+  background: #e6e6e6;
+}
+
+.add-button {
+  padding: 8px 15px;
+  font-size: 14px;
+  color: #fff;
+  background: #7b5aff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background: #6248cc;
+}
